@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import jdk.jshell.spi.ExecutionControl;
 public class SIAKAD07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
