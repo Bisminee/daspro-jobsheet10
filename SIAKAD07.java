@@ -3,7 +3,12 @@ import jdk.jshell.spi.ExecutionControl;
 public class SIAKAD07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int nilai[][] = new int[4][3];
+        int mahasiswa, mataKuliah;
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        mahasiswa = sc.nextInt();
+        System.out.print("Masukkan jumlah mata kuliah: ");
+        mataKuliah = sc.nextInt();
+        int nilai[][] = new int[mahasiswa][mataKuliah];
         
 
         for (int i = 0; i < nilai.length; i++) {
@@ -16,19 +21,19 @@ public class SIAKAD07 {
                 totalPerSiswa += nilai[i][j];
             }
 
-            System.out.println("Nilai rata-rata: " + totalPerSiswa/3);
+            System.out.println("Nilai rata-rata: " + totalPerSiswa/mataKuliah);
         }
 
         System.out.println("\n===================================");
         System.out.println("Rata-rata Nilai setiap Mata Kuliah");
 
-        for (int j = 0; j < 3 ; j++) {
+        for (int j = 0; j < mataKuliah ; j++) {
             double totalPerMatkul = 0;
 
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < mahasiswa; i++) {
                 totalPerMatkul += nilai[i][j];
             }
-            System.out.println("Mata Kuliah " + (j+1) + ": " + totalPerMatkul/4);
+            System.out.println("Mata Kuliah " + (j+1) + ": " + totalPerMatkul/mahasiswa);
         }
     }
 }
